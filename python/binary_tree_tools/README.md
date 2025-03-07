@@ -22,8 +22,33 @@ Would be encoded as:
 To make use of the code:
 
 ```
-codec = Codec()
+# make sure binary_tree_tools is on PYTHONPATH
+from binary_tree_tools import serialize_tree, deserialize_tree
 example_tree = TreeNode(1, left=TreeNode(0))
-serialized = codec.serialize(example_tree)
-deserialized = codec.deserialize(serialized)
+serialized = serialize_tree(example_tree)
+deserialized = deserialize_tree(serialized)
+```
+
+# Print binary tree structure
+
+To print out a binary tree structure as follows:
+
+```
+  └──2
+     ├──6
+     │  └──4
+     │     ├──5
+     │     └──3
+     └──1
+        └──0
+
+```
+
+You can make use of the print_tree method from binary_tools:
+
+```
+from binary_tools import print_tree
+
+tree = TreeNode(1, left=TreeNode(0), right=TreeNode(2))
+print_tree(tree)
 ```

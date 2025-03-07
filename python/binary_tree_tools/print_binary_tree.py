@@ -15,7 +15,7 @@ def print_tree(node, last=True, header=''):
     if children:
         for i, n in enumerate(children):
             print_tree(
-                    n,
-                    header=header + (blank if last else pipe),
-                    last=i == len(children) - 1
+                n,
+                header=header + (blank if last else pipe),
+                last=i == len(children) - 1
             )
